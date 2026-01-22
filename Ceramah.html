@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran Ceramah Berbayar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1 {
+            color: #0b5ed7;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #0b5ed7;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- FASA 1 -->
+    <h1>Ceramah Profesional: Teknologi Masa Hadapan</h1>
+    <p><strong>Penceramah:</strong> En. Sabri bin Saep(Pakar IT)</p>
+    <p><strong>Sinopsis:</strong>Peserta dapat menambah ilmu dalam bidang IT.</p>
+    <p><strong>Tarikh:</strong> 06 Mac 2026</p>
+    <p><strong>Masa:</strong> 9.00 pagi - 2.00 petang</p>
+    <p><strong>Lokasi:</strong> Dewan Harumanis</p>
+    <p><strong>Yuran:</strong> RM30 seorang</p>
+    <p><strong>No.Telefon:</strong>017-6337411</p>
+
+    <!-- FASA 2 -->
+    <h2>Borang Pendaftaran</h2>
+
+    <form action="pengesahan.php" method="POST" enctype="multipart/form-data">
+        <label>Nama Penuh</label>
+        <input type="text" name="nama" required>
+
+        <label>Alamat E-mel</label>
+        <input type="email" name="email" required>
+
+        <label>Nombor Telefon</label>
+        <input type="text" name="telefon" required>
+
+        <label>Kategori Peserta</label>
+        <select name="kategori" required>
+            <option value="">-- Pilih --</option>
+            <option>Pelajar</option>
+            <option>Pensyarah</option>
+            <option>Orang Awam</option>
+            <option>Korporat</option>
+        </select>
+
+        <label>Bilangan Slot</label>
+        <input type="number" name="slot" min="1" required>
+
+        <label>Bukti Pembayaran</label>
+        <input type="file" name="bukti" required>
+
+        <label>
+            <input type="checkbox" required>
+            Saya bersetuju dengan Terma & Syarat
+        </label>
+
+        <button type="submit">Hantar</button>
+    </form>
+
+</div>
+
+</body>
+</html>
