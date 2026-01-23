@@ -4,40 +4,68 @@
     <meta charset="UTF-8">
     <title>Pendaftaran Ceramah Berbayar</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-        }
-        h1 {
-            color: #0b5ed7;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px;
-            background: #0b5ed7;
-            color: white;
-            border: none;
-        }
+        
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
+
+h1 {
+    color: #0b5ed7;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+}
+
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.checkbox-group input {
+    width: auto;   
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    margin: 0;
+}
+
+
+
+       
+        
     </style>
 </head>
 <body>
 
 <div class="container">
+    <img src="gambar.jpeg" alt="gambar"style="width:200px";>
 
     <!-- FASA 1 -->
     <h1>Ceramah Profesional: Teknologi Masa Hadapan</h1>
@@ -77,10 +105,10 @@
         <label>Bukti Pembayaran</label>
         <input type="file" name="bukti" required>
 
-        <label>
-            <input type="checkbox" required>
-            Saya bersetuju dengan Terma & Syarat
-        </label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="terma" required>
+            <label for="terma">Saya bersetuju dengan Terma & Syarat</label>
+        </div>
 
         <button type="submit">Hantar</button>
     </form>
