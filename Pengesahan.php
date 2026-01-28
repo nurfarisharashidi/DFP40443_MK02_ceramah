@@ -43,7 +43,7 @@ $jumlah = $hargaUnit * $slot;
     <p><strong>Bilangan Slot:</strong> <?= $slot ?></p>
     <p><strong>Jumlah Yuran:</strong> RM <?= number_format($jumlah, 2) ?></p>
 
-    <p>Pendaftaran anda telah berjaya.</p>
+    <p>Pendaftaran anda telah berjaya</p>
 </div>
 
 </body>
